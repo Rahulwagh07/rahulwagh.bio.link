@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css" />  
+  <title>Bio Links</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="profile">
+      <img src="./assests/proflle-photo.png" alt="Profile Photo" class="profile-photo">
+      <h1 class="profile-name">Rahul Wagh</h1>
+    </div>
+    <ul class="links">
+        <li><a href="https://github.com/Rahulwagh07"><i class="uil uil-github-alt"></i> GitHub</a></li>
+        <li><a href="https://twitter.com/RahulWagh_07"><i class="uil uil-twitter"></i> Twitter</a></li>
+        <!-- <li><a href="https://www.linkedin.com/in/rahulwagh07/"><i class="uil uil-linkedin"></i> LinkedIn</a></li> -->
+        <li><a href="https://rahulwagh.vercel.app"><i class="uil uil-twitter"></i> Portfolio Website</a></li>
+         
+    </ul>
+
+    <div class="share-container">
+        <i class="uil uil-arrow-up" onclick=openModal()></i>
+      </div>
+  </div>
+
+
+  <!-- MODAL -->
+  <div class="modal">
+    <!--modal header -->
+    <div class="modal-header">
+      <h1>Share this bio link</h1>
+      <div>
+        <i onclick="closeModal()" class="uil uil-times close"></i>
+      </div>
+    </div>
+
+<!-- modal- qr and links -->
+    <div class="modal-qr">  
+        <div class="qr-div"><img src="./assests/proflle-photo.png" class="qr"/></div>
+        <div class="socials">
+            <div class="share-links">
+                <div onclick="shareOnTwitter()"><i class="uil uil-twitter"></i> share on twitter</div>
+                <div onclick="shareViaWhatsApp()"><i class="uil uil-whatsapp"></i> share on whatsapp</div>
+                <div onclick="shareViaGmail()"><i class="uil uil-envelope"></i>share via mail</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal- input and copy-->
+    <div class="input-container">
+        <input readonly placeholder="https://rahulwagh.bio.link">
+        <button class="copyBtn">
+            <div class="copy" onclick="copyLink()">Copy</div>
+        </button>
+    </div>
+  </div>
+
+  <div class="overlay" onclick="closeModal()" ></div>
+  <script src="scripts.js"></script>
+</body>
+</html>
