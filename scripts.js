@@ -42,17 +42,30 @@ async function copyLink() {
   
 
  //function to open gmail with subject, body
-function shareViaGmail() {
-    var recipientEmail = '';  
-    var subject = 'Chekout this Bio Link';
-    var body = 'Checkout bio link of Rahul Wagh: https://rahulwagh.bio.link';
+// function shareViaGmail() {
+//     var recipientEmail = '';  
+//     var subject = 'Chekout this Bio Link';
+//     var body = 'Checkout bio link of Rahul Wagh: https://rahulwagh.bio.link';
 
-    var gmailLink = 'https://mail.google.com/mail/?view=cm&fs=1' +
-        '&to=' + recipientEmail +
-        '&su=' + encodeURIComponent(subject) +
+//     var gmailLink = 'https://mail.google.com/mail/?view=cm&fs=1' +
+//         '&to=' + recipientEmail +
+//         '&su=' + encodeURIComponent(subject) +
+//         '&body=' + encodeURIComponent(body);
+
+//     window.open(gmailLink, '_blank');
+// }
+
+//function to share via Email
+function shareViaEmail() {
+    var recipientEmail = ''; 
+    var subject = 'Check out this Bio Link';
+    var body = 'Checkout this bio link of Rahul Wagh: https://rahulwagh.bio.link';
+
+    var mailtoLink = 'mailto:' + recipientEmail +
+        '?subject=' + encodeURIComponent(subject) +
         '&body=' + encodeURIComponent(body);
 
-    window.open(gmailLink, '_blank');
+    window.location.href = mailtoLink;
 }
 
 //function to share on whatsapp

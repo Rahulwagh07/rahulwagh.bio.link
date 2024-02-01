@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css" />  
-  <title>Bio Links</title>
+  <link rel="icon" type="image/png" href="/assests/favicon.png">
+  <title>Rahul Wagh</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -16,15 +17,14 @@
       <h3 class="role">Full stack developer</h3>
     </div>
     <ul class="links">
-        <li><a href="https://github.com/Rahulwagh07"><i class="uil uil-github-alt"></i> GitHub</a></li>
-        <li><a href="https://twitter.com/RahulWagh_07"><i class="uil uil-twitter"></i> Twitter</a></li>
-        <!-- <li><a href="https://www.linkedin.com/in/rahulwagh07/"><i class="uil uil-linkedin"></i> LinkedIn</a></li> -->
-        <li><a href="https://rahulwagh.vercel.app"><i class="uil uil-twitter"></i> Portfolio Website</a></li>
+        <li><a href="https://github.com/Rahulwagh07" ><i class="fa-brands fa-github github"></i> <span>Github</span></a></li>
+        <li><a href="https://twitter.com/RahulWagh_07"><i class="fa-brands fa-x-twitter twitter"></i> <span>Twitter</span></a></li>
+        <li><a href="https://rahulwagh.vercel.app"><i class="fa-solid fa-code portfolio"></i> <span>Portfolio Website</span></a></li>
          
     </ul>
 
     <div class="share-container">
-        <i class="uil uil-arrow-up" onclick=openModal()></i>
+        <i class="fa-solid fa-arrow-up-from-bracket" onclick="openModal()"></i>
       </div>
   </div>
 
@@ -35,7 +35,7 @@
     <div class="modal-header">
       <h3>Share this bio link</h3>
       <div>
-        <i onclick="closeModal()" class="uil uil-times close"></i>
+        <i class="fa-solid fa-xmark close" onclick="closeModal()"></i>
       </div>
     </div>
 
@@ -44,16 +44,16 @@
         <div class="qr-div"><img src="./assests/qr.png" class="qr"/></div>
         <div class="socials">
             <div class="share-links">
-                <div onclick="shareOnTwitter()"><i class="uil uil-twitter"></i> share on twitter</div>
-                <div onclick="shareViaWhatsApp()"><i class="uil uil-whatsapp"></i> share on whatsapp</div>
-                <div onclick="shareViaGmail()"><i class="uil uil-envelope"></i> share via mail</div>
+                <div onclick="shareOnTwitter()"> <span class="icon-outer"><i class="fa-brands fa-x-twitter twitter-2"></i></span> <span class="text">Share on Twitter</span><i class="fa-solid fa-greater-than greater-icon-first"></i></div>
+                <div onclick="shareViaWhatsApp()"> <sapn class="icon-outer"><i class="fa-brands fa-whatsapp whatsapp"></i></sapn><span class="text">Share on Whatsapp</span><i class="fa-solid fa-greater-than greater-icon-second"></i></div>
+                <div onclick="shareViaEmail()"><span class="icon-outer"><i class="fa-regular fa-envelope email"></i> </span><span class="text">Share via Email</span><i class="fa-solid fa-greater-than greater-icon-third"></i></div>
             </div>
         </div>
     </div>
 
     <!-- modal- input and copy-->
     <div class="url-container">
-        <div class="url"> https://rahulwagh.bio.link</div>
+        <div class="url"><i class="fa-solid fa-link link-icon"></i> https://rahulwagh.bio.link</div>
         <button class="copyBtn">
             <div class="copy" onclick="copyLink()">Copy</div>
         </button>
@@ -61,6 +61,7 @@
   </div>
 
   <div class="overlay" onclick="closeModal()" ></div>
+  <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
   <script src="scripts.js"></script>
 </body>
 </html>

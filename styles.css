@@ -33,8 +33,9 @@ body{
   font-size: x-large;
 }
 .role{
+  margin-top: 8px;
   color: #94a3b8;
-  font-size: smaller;
+  font-size: 16px;
 }
 
 
@@ -43,15 +44,15 @@ body{
 }
 
 .links li {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .links li a {
   display: flex;
   justify-content: center;
-  padding: 15px;
+  padding: 18px;
   background-color: #334155;
-  color: #94a3b8;
+  color: #e2e8f0;
   text-decoration: none;
   border-radius: 10px;
   transition: background-color 0.3s ease;
@@ -60,11 +61,21 @@ body{
 .links li a:hover {
   background-color: #2563eb;
 }
-
 .links li a i{
-  color: red;
+  margin-right: 10px;
+  font-size: large;
 }
-
+ 
+.github{
+  color: #f43f5e;
+}
+.twitter{
+  color: black;
+}
+.portfolio{
+  color: #c026d3;
+}
+ 
 .share-container{
   position: absolute;
   top: -15px;
@@ -73,10 +84,12 @@ body{
 
 .share-container i{
   cursor: pointer;
-  background-color: #334155;
-  border-radius:5px;
-  padding: 8px;
+  background-color: #0f172a;
+  border-radius: 50%;
+  padding: 15px;
+  border: 1px solid #f8fafc0f;
 }
+ 
 
 /* modal */
 
@@ -89,7 +102,7 @@ body{
   left: 50%;
   translate: -50% -50%;
   border: 2px solid #f8fafc0f;
-  width: 500px;
+  width: 550px;
   height: 400px;
   scale:0;   
   background: #0f172a;
@@ -148,23 +161,53 @@ body{
   padding: 10px;
 }
 .socials{
-  display: flex;
+  display: grid;
+  grid-template-columns:auto auto auto;
 }
 .share-links{
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  padding: 10px;
+  gap: 12px;
+
 }
 .share-links div {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
   color: #94a3b8;
+  padding: 5px;
 }
-.share-links div i {
-  color: red;
-  border-radius: 20px;
-  width: 50px;
-  margin-right: 10px;
+.icon-outer{
+  background: #1f2937;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.twitter-2{
+  color: slategrey;
+}
+.whatsapp{
+  color: green;
+}
+.email{
+  color: blueviolet;
+}
+.text{
+  font-size: 15px;
+}
+.greater-icon-first{
+  margin-left: 25px;
+  font-size: small;
+}
+.greater-icon-second{
+  font-size: small;
+}
+.greater-icon-third{
+  margin-left: 26px;
+  font-size: small;
 }
 .url-container{
   display: flex;
@@ -173,27 +216,32 @@ body{
   border: 1px solid #f8fafc0f;
 }
 .url {
-   font-size: 16px;
-   color:#0ea5e9;
+   font-size: 14px;
    padding: 10px;
-
+   color: #94a3b8;
+   margin-top: 5px;
+   letter-spacing: 1px;
 }
 .copyBtn{
-  background: #0369a1;
+  background: #4338ca;
   border: none;
   padding: 5px;
   
 }
 .copy{
   cursor: pointer;
-  font-size: large;
   padding: 10px;
-  color: #cbd5e1;
+  color: #f4f4f5;
   font-size: 16px;
   width: 8em;
 }
+.link-icon{
+  font-size: smaller;
+  margin-right: 5px;
+  margin-left: 6px;
+}
 
-@media screen and (max-width: 500px ) {
+@media screen and (max-width: 550px ) {
    .modal-qr{
     flex-direction: column;
     align-items: center;
@@ -206,15 +254,21 @@ body{
      border-radius: 5px;
      top: 60%;
      gap:15px;
+     border-bottom: none;
+     border-radius: 10px;
   }
   .copy{
     width: 4em;
   }
   .url-container{
-    margin-top: 45px;
+    margin-top: 15px;
   }
   .modal-qr{
     grid-template-columns: auto;
+  }
+  .link-icon{
+    margin-left: 0;
+    margin-right: 0;
   }
 
 }
