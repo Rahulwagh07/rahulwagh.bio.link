@@ -16,18 +16,26 @@
       <h1 class="profile-name">Rahul Wagh</h1>
       <h3 class="role">Full stack developer</h3>
     </div>
+
     <ul class="links">
-        <li><a href="https://github.com/Rahulwagh07" ><i class="fa-brands fa-github github"></i> <span>Github</span></a></li>
-        <li><a href="https://twitter.com/RahulWagh_07"><i class="fa-brands fa-x-twitter twitter"></i> <span>Twitter</span></a></li>
-        <li><a href="https://rahulwagh.vercel.app"><i class="fa-solid fa-code portfolio"></i> <span>Portfolio Website</span></a></li>
-         
+        <li><a href="https://github.com/Rahulwagh07">
+          <i class="fa-brands fa-github github"></i>
+          <span>Github</span></a>
+        </li>
+        <li><a href="https://twitter.com/RahulWagh_07">
+          <i class="fa-brands fa-x-twitter twitter"></i>
+          <span>Twitter</span></a>
+        </li>
+        <li><a href="https://rahulwagh.vercel.app">
+          <i class="fa-solid fa-code portfolio"></i>
+        <span>Portfolio Website</span></a>
+      </li>  
     </ul>
 
     <div class="share-container">
         <i class="fa-solid fa-arrow-up-from-bracket" onclick="openModal()"></i>
       </div>
   </div>
-
 
   <!-- MODAL -->
   <div class="modal">
@@ -41,19 +49,52 @@
 
 <!-- modal- qr and links -->
     <div class="modal-qr">  
-        <div class="qr-div"><img src="./assests/qr.png" class="qr"/></div>
+
+        <div class="qr-front" onmouseover="showDownloadQR()">
+          <img src="./assests/qr.png" class="qr"/>
+        </div>
+
+        <div class="qr-back" onmouseleave="showFrontQR()" onclick="downloadQRCode()">
+          <img src="./assests/qr.png" class="qr-back-img"/>
+          <button class="qr-download"><i class="fa-solid fa-arrow-down"></i> <span id="download-text"> Download</span></button>
+        </div>
+
         <div class="socials">
             <div class="share-links">
-                <div onclick="shareOnTwitter()"> <span class="icon-outer"><i class="fa-brands fa-x-twitter twitter-2"></i></span> <span class="text">Share on Twitter</span><i class="fa-solid fa-greater-than greater-icon-first"></i></div>
-                <div onclick="shareViaWhatsApp()"> <sapn class="icon-outer"><i class="fa-brands fa-whatsapp whatsapp"></i></sapn><span class="text">Share on Whatsapp</span><i class="fa-solid fa-greater-than greater-icon-second"></i></div>
-                <div onclick="shareViaEmail()"><span class="icon-outer"><i class="fa-regular fa-envelope email"></i> </span><span class="text">Share via Email</span><i class="fa-solid fa-greater-than greater-icon-third"></i></div>
+                <div onclick="shareOnTwitter()">
+                  <span class="icon-outer">
+                    <i class="fa-brands fa-x-twitter twitter-2"></i>
+                  </span>
+                  <span class="text">Share on Twitter</span>
+                  <i class="fa-solid fa-angle-down icon-first"></i>
+                </div>
+
+                <div onclick="shareViaWhatsApp()">
+                  <sapn class="icon-outer">
+                    <i class="fa-brands fa-whatsapp whatsapp"></i>
+                  </sapn>
+                  <span class="text">Share on Whatsapp</span>
+                  <i class="fa-solid fa-angle-down icon-second"></i>
+                </div>
+
+                <div onclick="shareViaEmail()">
+                  <span class="icon-outer">
+                    <i class="fa-regular fa-envelope email"></i>
+                  </span>
+                  <span class="text">Share via Email</span>
+                  <i class="fa-solid fa-angle-down icon-third"></i>
+                </div>
+
             </div>
         </div>
     </div>
 
     <!-- modal- input and copy-->
     <div class="url-container">
-        <div class="url"><i class="fa-solid fa-link link-icon"></i> https://rahulwagh.bio.link</div>
+        <div class="url">
+          <i class="fa-solid fa-link link-icon"></i>
+          <span>https://rahulwagh.bio.link</span>
+        </div>
         <button class="copyBtn">
             <div class="copy" onclick="copyLink()">Copy</div>
         </button>
