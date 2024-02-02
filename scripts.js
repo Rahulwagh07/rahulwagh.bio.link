@@ -20,7 +20,7 @@ const closeModal = () => {
 //function to copy url to clipboard
 async function copyLink() {
     try {
-      await navigator.clipboard.writeText("https://rahulwagh.bio.link");
+      await navigator.clipboard.writeText("https://rahulwagh-bio.vercel.app");
       copy.innerText = "copied";
     }
     catch(e) {
@@ -35,7 +35,7 @@ async function copyLink() {
   //function to share bio link on twitter
   function shareOnTwitter() {
     // Construct the tweet text
-    var tweetText = encodeURIComponent("Checkout this bio link of Rahul Wagh: https://rahulwagh.bio.link");
+    var tweetText = encodeURIComponent("Checkout this bio link of Rahul Wagh: https://rahulwagh-bio.vercel.app");
 
     // Open Twitter in a new window with the share URL
     window.open("https://twitter.com/intent/tweet?text=" + tweetText, "_blank");
@@ -46,7 +46,7 @@ async function copyLink() {
 function shareViaEmail() {
     var recipientEmail = ''; 
     var subject = 'Check out this Bio Link';
-    var body = 'Checkout this bio link of Rahul Wagh: https://rahulwagh.bio.link';
+    var body = 'Checkout this bio link of Rahul Wagh: https://rahulwagh-bio.vercel.app';
 
     var mailtoLink = 'mailto:' + recipientEmail +
         '?subject=' + encodeURIComponent(subject) +
@@ -57,7 +57,7 @@ function shareViaEmail() {
 
 //function to share on whatsapp
 function shareViaWhatsApp() {
-    var text = 'Checkout this link: https://rahulwagh.bio.link';
+    var text = 'Checkout this bio link of Rahul Wagh: https://rahulwagh-bio.vercel.app';
     
     var whatsappLink = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(text);
     
